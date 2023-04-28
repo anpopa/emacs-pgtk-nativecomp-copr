@@ -1,13 +1,13 @@
 diff --git a/src/gnutls.c b/src/gnutls.c
-index ca7e9fc4c73..716dd0dd428 100644
+index 91e369375f2..b8f5eded51b 100644
 --- a/src/gnutls.c
 +++ b/src/gnutls.c
-@@ -1953,7 +1953,7 @@ one trustfile (usually a CA bundle).  */)
+@@ -1840,7 +1840,7 @@ one trustfile (usually a CA bundle).  */)
    gnutls_certificate_credentials_t x509_cred = NULL;
    gnutls_anon_client_credentials_t anon_cred = NULL;
    Lisp_Object global_init;
 -  char const *priority_string_ptr = "NORMAL"; /* default priority string.  */
 +  char const *priority_string_ptr = "@SYSTEM"; /* default priority string.  */
    char *c_hostname;
-   const char *c_pass;
  
+   /* Placeholders for the property list elements.  */
