@@ -13,7 +13,7 @@
 Summary:       GNU Emacs text editor
 Name:          emacs
 Epoch:         1
-Version:       29.0.90
+Version:       29.0.60
 Release:       1%{gitrel}%{?dist}
 License:       GPLv3+ and CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
@@ -320,8 +320,8 @@ rm %{buildroot}%{_bindir}/emacs
 touch %{buildroot}%{_bindir}/emacs
 
 # Do not compress the files which implement compression itself (#484830)
-gunzip %{buildroot}%{_datadir}/emacs/%{version}/lisp/jka-compr.el.gz
-gunzip %{buildroot}%{_datadir}/emacs/%{version}/lisp/jka-cmpr-hook.el.gz
+#gunzip %{buildroot}%{_datadir}/emacs/%{version}/lisp/jka-compr.el.gz
+#gunzip %{buildroot}%{_datadir}/emacs/%{version}/lisp/jka-cmpr-hook.el.gz
 
 # Install emacs.pdmp of the emacs with GTK+
 install -p -m 0644 build-gtk/src/emacs.pdmp %{buildroot}%{_bindir}/emacs-%{version}.pdmp
